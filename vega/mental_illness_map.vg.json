@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Worldwide Mental Illness Rates by Country (2017)",
+  "title": "Worldwide Mental Illness Rates by Country",
   "width": 800,
   "height": 400,
   "projection": { "type": "equalEarth" },
@@ -76,7 +76,11 @@
     },
     "tooltip": [
       { "field": "Entity", "type": "nominal", "title": "Country" },
-      { "field": "Mental Illness Rate (%)", "type": "quantitative" }
+      {
+        "field": "Mental Illness Rate (%)",
+        "type": "quantitative",
+        "format": "0.2f"
+      }
     ]
   }
 }
