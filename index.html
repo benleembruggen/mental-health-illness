@@ -16,11 +16,15 @@
   <body>
 
     <div id="mental_illness_map"></div>
+    <br><br>
+    <div id="mental_illness_line"></div>
 
     <script type="text/javascript">
 
       vegaEmbed('#mental_illness_map', "./vega/mental_illness_map.vg.json").then(function (result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
+      vegaEmbed('#mental_illness_line', "./vega/mental_illness_line.vg.json").then(function (result) {
       }).catch(console.error);
     </script>
 

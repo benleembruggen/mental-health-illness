@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Line chart of mental health disorders",
+  "width": 800,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/benleembruggen/mental-health-illness/main/data/mental_illness_per_country_pivot.csv"
+  },
+  "params": [
+    {
+      "name": "Country_Selection",
+      "value": "Australia",
+      "bind": {
+        "name": "Select Country: ",
+        "input": "select",
+        "options": [
+          "Australia",
+          "Brazil",
+          "Canada",
+          "China",
+          "France",
+          "Germany",
+          "India",
+          "Indonesia",
+          "Italy",
+          "Japan",
+          "Mexico",
+          "Nigeria",
+          "Pakistan",
+          "Russia",
+          "Saudi Arabia",
+          "South Africa",
+          "South Korea",
+          "Spain",
+          "United Kingdom"
+        ]
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.Entity === Country_Selection"
+    }
+  ],
+  "layer": [
+    {
+      "mark": { "type": "line", "point": true },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "DisorderValue",
+          "title": "Effected population (%)",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Disorder",
+          "type": "nominal",
+          "legend": {
+            "title": "Mental Disorder"
+          }
+        },
+        "tooltip": [
+          { "field": "Disorder", "type": "nominal", "title": "Disorder" },
+          {
+            "field": "DisorderValue",
+            "title": "Disorder Value (%)",
+            "type": "quantitative",
+            "format": "0.2f"
+          },
+          { "field": "Year", "type": "quantitative", "title": "Year" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": -5,
+        "dy": -5,
+        "align": "right",
+        "baseline": "bottom",
+        "fontWeight": "bold",
+        "fontSize": 12
+      },
+      "encoding": {
+        "x": { "value": 325 },
+        "y": { "value": 240 },
+        "text": { "value": "Mental health disorders" }
+      }
+    }
+  ]
+}
