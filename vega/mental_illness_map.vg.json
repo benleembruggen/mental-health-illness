@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Worldwide Mental Illness Rates by Country",
-  "width": 800,
+  "width": 1100,
   "height": 400,
   "projection": { "type": "equalEarth" },
   "data": {
@@ -82,5 +82,14 @@
         "format": "0.2f"
       }
     ]
-  }
+  },
+  "background": "#2c3035",
+  "config": {
+    "title": { "color": "white" },
+    "axis": {
+      "labelColor": "white"
+    },
+    "legend": { "labelColor": "white", "titleColor": "white" }
+  },
+  "view": { "stroke": null }
 }

@@ -7,24 +7,54 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- CSS file -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css" media="all"> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
   </head>
 
-  <body>
+  <body class="text-bg-dark">
+    <div class="container py-4 ">
+      <header class="text-bg-dark">
+        <title>Mental Health Illness</title>
+        <h2>Mental Health Illness Visualized</h2>
+        <h5>Benjamin Leembruggen</h5>
+        <hr>
+      </header>
 
-    <div id="mental_illness_map"></div>
-    <br><br>
-    <div id="mental_illness_line"></div>
+      <div class="card1">
+        <p class="col-md-8 fs-4">
+        <div id="mental_illness_map"></div>
+        </p>
+      </div>
+
+      <div class="row align-items-md-stretch">
+        <div class="card2">
+          <div class="h-100 p-5 text-bg-dark">
+            <h2>Heading</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis doloremque nam architecto voluptas
+              enim aspernatur, incidunt, expedita nulla ducimus quibusdam provident ratione? Maiores iste libero numquam
+              enim ullam nobis laborum.</p>
+          </div>
+        </div>
+
+        <div class="card3">
+          <div class="h-100 p-5">
+            <div id="mental_illness_line"></div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
 
     <script type="text/javascript">
-
-      vegaEmbed('#mental_illness_map', "./vega/mental_illness_map.vg.json").then(function (result) {
+      vegaEmbed('#mental_illness_map', "./vega/mental_illness_map.vg.json", { "actions": false }).then(function (result) {
       }).catch(console.error);
 
-      vegaEmbed('#mental_illness_line', "./vega/mental_illness_line.vg.json").then(function (result) {
+      vegaEmbed('#mental_illness_line', "./vega/mental_illness_line.vg.json", { "actions": false }).then(function (result) {
       }).catch(console.error);
     </script>
 

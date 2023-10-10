@@ -1,8 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Line chart of mental health disorders",
-  "width": 800,
-  "height": 600,
+  "title": "Progression of Mental Health Illnesses by Country",
+  "width": 380,
   "data": {
     "url": "https://raw.githubusercontent.com/benleembruggen/mental-health-illness/main/data/mental_illness_per_country_pivot.csv"
   },
@@ -48,7 +47,8 @@
       "encoding": {
         "x": {
           "field": "Year",
-          "type": "quantitative"
+          "type": "quantitative",
+          "axis": { "format": "d" }
         },
         "y": {
           "field": "DisorderValue",
@@ -73,22 +73,16 @@
           { "field": "Year", "type": "quantitative", "title": "Year" }
         ]
       }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "dx": -5,
-        "dy": -5,
-        "align": "right",
-        "baseline": "bottom",
-        "fontWeight": "bold",
-        "fontSize": 12
-      },
-      "encoding": {
-        "x": { "value": 325 },
-        "y": { "value": 240 },
-        "text": { "value": "Mental health disorders" }
-      }
     }
-  ]
+  ],
+  "background": "#2c3035",
+  "config": {
+    "title": { "color": "white" },
+    "axis": {
+      "labelColor": "white",
+      "titleColor": "white"
+    },
+    "legend": { "labelColor": "white", "titleColor": "white" }
+  },
+  "view": { "stroke": null }
 }
