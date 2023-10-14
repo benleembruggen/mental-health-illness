@@ -1,0 +1,36 @@
+Continent,Disorder,DisorderValue
+Africa,Alcohol Use Disorders,1.2391825
+Africa,Anxiety Disorders,3.47145318
+Africa,Bipolar Disorder,0.64587814
+Africa,Depression,3.76851248
+Africa,Drug Use Disorders,0.70350422
+Africa,Eating Disorders,0.14364976
+Africa,Schizophrenia,0.17377432
+Americas,Alcohol Use Disorders,1.904282114
+Americas,Anxiety Disorders,4.523165543
+Americas,Bipolar Disorder,0.8529408571
+Americas,Depression,3.173018943
+Americas,Drug Use Disorders,0.9531593143
+Americas,Eating Disorders,0.3233227143
+Americas,Schizophrenia,0.2114691143
+Asia,Alcohol Use Disorders,1.264279128
+Asia,Anxiety Disorders,3.722482615
+Asia,Bipolar Disorder,0.6835287436
+Asia,Depression,3.322458667
+Asia,Drug Use Disorders,1.009334923
+Asia,Eating Disorders,0.2194540513
+Asia,Schizophrenia,0.2225475128
+Europe,Alcohol Use Disorders,2.097947389
+Europe,Anxiety Disorders,4.518387556
+Europe,Bipolar Disorder,0.8302724722
+Europe,Depression,3.430227389
+Europe,Drug Use Disorders,0.8270745
+Europe,Eating Disorders,0.4103501389
+Europe,Schizophrenia,0.2355876667
+Oceania,Alcohol Use Disorders,1.290835538
+Oceania,Anxiety Disorders,3.925743923
+Oceania,Bipolar Disorder,0.5597499231
+Oceania,Depression,3.305850462
+Oceania,Drug Use Disorders,0.9797368462
+Oceania,Eating Disorders,0.2425864615
+Oceania,Schizophrenia,0.2494707692
