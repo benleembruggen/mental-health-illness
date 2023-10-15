@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Percentage of Population Effected by Mental Illness",
+  "width": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/benleembruggen/mental-health-illness/main/data/mental_illness_gender.csv"
+  },
+  "mark": "arc",
+  "transform": [{ "filter": "datum.Year == 2017" }],
+  "encoding": {
+    "theta": { "field": "Value", "type": "quantitative" },
+    "color": {
+      "field": "Gender",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Female", "Male", "Not Effected"],
+        "range": ["#FF69B4", "#1F77B4", "#999999"]
+      },
+      "title": "Population Category"
+    },
+    "tooltip": [
+      { "field": "Gender", "type": "nominal", "title": "Population Category" },
+      {
+        "field": "Value",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "Percentage effected (%)"
+      }
+    ]
+  },
+  "background": "#2c3035",
+  "config": {
+    "title": { "color": "white" },
+    "arc": { "innerRadius": 80, "outerRadius": 150 },
+    "axis": { "labelColor": "white", "gridColor": "white" },
+    "legend": { "labelColor": "white", "titleColor": "white" }
+  }
+}

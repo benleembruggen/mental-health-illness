@@ -3,9 +3,9 @@
 
   <head>
     <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -18,8 +18,9 @@
   <body class="text-bg-dark">
     <div class="container py-4 ">
       <header class="text-bg-dark">
+        <img src="images/brain.png" width="100px" height="80px" style="float: right;">
         <title>Mental Health Illness</title>
-        <h2>Mental Health Illness Visualized</h2>
+        <h2>Global Mental Health Illness Visualized</h2>
         <h5>Benjamin Leembruggen</h5>
         <hr>
       </header>
@@ -33,31 +34,61 @@
       <div class="row align-items-md-stretch">
         <div class="card2">
           <div class="h-100 p-5 text-bg-dark">
-            <h2>Heading</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis doloremque nam architecto voluptas
-              enim aspernatur, incidunt, expedita nulla ducimus quibusdam provident ratione? Maiores iste libero numquam
-              enim ullam nobis laborum.</p>
+            <p>In this visualization, we explore the profound global impact of mental health on societies from 1990 to
+              2017. These
+              interactive charts and data representations, allow for an in-depth investigation into the
+              prevalence and trends of various mental illnesses, shedding light on their evolving influence on
+              individuals and
+              communities worldwide over the past three decades.</p>
           </div>
         </div>
 
         <div class="card3">
           <div class="h-100 p-5">
-            <div id="mental_illness_line"></div>
+            <div id="mental_illness_gender"></div>
           </div>
         </div>
       </div>
 
+      <div class="card1">
+        <p class="col-md-8 fs-4">
+        <h2>How Different Mental Disorders Effect Continents</h2>
+        <p><strong>Anxiety</strong> and <strong>depression</strong> are two of the most common mental illnesses in the
+          world, affecting hundreds of millions of
+          people each year.</p>
+        <br>
+        <div id="mental_illness_continent"></div>
+        </p>
+      </div>
 
+      <div class="card1">
+        <p class="col-md-8 fs-4">
+        <h2>Compare Mental Disorders by Country</h2>
+        <p>Use the two charts below to compare and contrast mental disorders effect over time between countries </p>
+        <br>
+        <div id="mental_illness_line"></div>
+        <div id="mental_illness_line2"></div>
+        </p>
+      </div>
     </div>
+
 
     <script type="text/javascript">
       vegaEmbed('#mental_illness_map', "./vega/mental_illness_map.vg.json", { "actions": false }).then(function (result) {
       }).catch(console.error);
 
+      vegaEmbed('#mental_illness_gender', "./vega/mental_illness_gender_doughnut.vg.json", { "actions": false }).then(function (result) {
+      }).catch(console.error);
+
+      vegaEmbed('#mental_illness_continent', "./vega/mental_illness_continent.vg.json", { "actions": false }).then(function (result) {
+      }).catch(console.error);
+
       vegaEmbed('#mental_illness_line', "./vega/mental_illness_line.vg.json", { "actions": false }).then(function (result) {
       }).catch(console.error);
-    </script>
 
+      vegaEmbed('#mental_illness_line2', "./vega/mental_illness_line.vg.json", { "actions": false }).then(function (result) {
+      }).catch(console.error);
+    </script>
   </body>
 
 </html>

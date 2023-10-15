@@ -6,7 +6,6 @@
 }
 
 .card2 {
-  /* background-color: #2c3035; */
   padding: 10px;
   margin-bottom: 30px;
   margin-left: 10px;
@@ -21,4 +20,12 @@
   margin-left: 10px;
   border-radius: 10px;
   width: 48.5%;
+}
+
+#mental_illness_line {
+  margin-left: 20px;
+}
+
+#mental_illness_line2 {
+  margin-left: 100px;
 }

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Percentage of a Continent's Population Effected by Mental Illness",
+  "width": 1100,
+  "data": {
+    "url": "https://raw.githubusercontent.com/benleembruggen/mental-health-illness/main/data/mental_illness_contnent.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": { "field": "Disorder", "title": "Mental Health Disorder" },
+    "y": {
+      "field": "DisorderValue",
+      "type": "quantitative",
+      "title": "Effected population (%)"
+    },
+    "xOffset": { "field": "Continent" },
+    "color": {
+      "field": "Continent",
+      "type": "nominal",
+      "scale": { "scheme": "dark2" }
+    },
+    "tooltip": [
+      { "field": "Continent", "type": "nominal" },
+      {
+        "field": "DisorderValue",
+        "type": "quantitative",
+        "format": "0.2f",
+        "title": "Population Effected (%)"
+      }
+    ]
+  },
+  "background": "#2c3035",
+  "config": {
+    "title": { "color": "white" },
+    "axis": {
+      "labelColor": "white",
+      "titleColor": "white",
+      "gridColor": "#666666"
+    },
+    "legend": { "labelColor": "white", "titleColor": "white" }
+  },
+  "view": { "stroke": null }
+}

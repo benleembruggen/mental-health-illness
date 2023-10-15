@@ -80,7 +80,8 @@
     "title": { "color": "white" },
     "axis": {
       "labelColor": "white",
-      "titleColor": "white"
+      "titleColor": "white",
+      "gridColor": "#666666"
     },
     "legend": { "labelColor": "white", "titleColor": "white" }
   },
